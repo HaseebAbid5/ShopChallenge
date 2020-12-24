@@ -14,12 +14,13 @@ public class PlayerActions : MonoBehaviour {
 
     public Animator anim;
     public Rigidbody2D rb2d;
+    public SpriteRenderer shirt;
 
     Vector2 movement, direction;
     RaycastHit2D hit;
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -63,6 +64,11 @@ public class PlayerActions : MonoBehaviour {
     public void DoneTalking()
     {
         talking = false;
+    }
+
+    public void Equip (Item item)
+    {
+        shirt.sprite = item.art;
     }
 
 }

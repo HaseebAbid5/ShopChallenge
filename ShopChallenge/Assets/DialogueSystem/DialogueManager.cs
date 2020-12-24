@@ -98,7 +98,7 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         scentences.Clear();
         names.Clear();
