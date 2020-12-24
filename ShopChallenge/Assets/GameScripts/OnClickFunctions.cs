@@ -9,17 +9,6 @@ public class OnClickFunctions : MonoBehaviour
     public GameObject player;
     public int amount;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void CloseDialogueBox()
     {
@@ -35,11 +24,5 @@ public class OnClickFunctions : MonoBehaviour
     {
         player.GetComponent<Wallet>().Sell(int.Parse(amount.text));
     }
-
-    public void Equip(Item item)
-    {
-        player.GetComponent<PlayerActions>().Equip(item);
-    }
-
 
 }
