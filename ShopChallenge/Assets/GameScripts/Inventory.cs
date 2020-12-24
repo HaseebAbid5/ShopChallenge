@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//Basic inventory class to set and get the shirt sprite of the character
 public class Inventory : MonoBehaviour
 {
     public List<Item> items;
@@ -18,9 +20,9 @@ public class Inventory : MonoBehaviour
     void Naked()
     {
         if (items.Count == 0)
-        {
             SetShirt(defaultItem.art);
-        }
+        else
+            SetShirt(items[0].art);
     }
 
     public void SetShirt(Sprite shirt)
@@ -41,5 +43,6 @@ public class Inventory : MonoBehaviour
     public void RemoveShirt(Item shirt)
     {
         items.Remove(shirt);
+        Naked();
     }
 }

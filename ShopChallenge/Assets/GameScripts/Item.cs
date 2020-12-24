@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//An Item scriptable object, used to make many different items
 [CreateAssetMenu]
 public class Item: ScriptableObject
 {

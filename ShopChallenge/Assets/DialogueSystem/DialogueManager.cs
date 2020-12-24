@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour {
 
     }
 
+    //Check for spacebar press
     private void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -37,9 +38,11 @@ public class DialogueManager : MonoBehaviour {
     {
         scentences.Clear();
         names.Clear();
-        displayPic.Clear();
+        displayPic.Clear();  //clear previouse info
 
-        anim.SetBool("IsOpen", true);
+        //Animate the window and set-up new info
+
+        anim.SetBool("IsOpen", true);  
 
         foreach (string scentence in dialogue.scentences)
         {
@@ -68,6 +71,8 @@ public class DialogueManager : MonoBehaviour {
         }
 
         string scentence = scentences.Dequeue();
+
+        //If a scentence contains ## then show dialogue options
 
         if (scentence.Contains("##"))
         {
@@ -113,6 +118,7 @@ public class DialogueManager : MonoBehaviour {
         choicesObject.transform.GetChild(1).gameObject.SetActive(false);
     }
 
+    //Activate custom options
     void ShowOptions()
     {
         choicesObject.transform.GetChild(0).gameObject.SetActive(true);

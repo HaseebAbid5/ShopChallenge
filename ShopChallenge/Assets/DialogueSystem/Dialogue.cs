@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //This class is used to set up each dialogue box
+//Each box will have a name, display picture, and dialogue scentences
 
 [System.Serializable]
 public class Dialogue{

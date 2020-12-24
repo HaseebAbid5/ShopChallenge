@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//Functions for just the button listeners in the UI
 public class OnClickFunctions : MonoBehaviour
 {
     public DialogueManager dm;

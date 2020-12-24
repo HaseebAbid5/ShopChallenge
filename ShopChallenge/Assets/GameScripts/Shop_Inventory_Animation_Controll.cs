@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class Shop_Inventory_Animation_Controll : MonoBehaviour
 {
+    //simple script for controller the animator for the UI windows
     Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         anim = this.GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Open()

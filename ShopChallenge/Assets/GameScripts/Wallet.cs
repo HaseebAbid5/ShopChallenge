@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Wallet script that manages all wallet activities
+
 public class Wallet : MonoBehaviour
 {
     int totalAmount;
