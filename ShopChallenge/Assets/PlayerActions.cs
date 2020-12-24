@@ -6,6 +6,7 @@ public class PlayerActions : MonoBehaviour
 {
     public float moveSpeed = 2f;
     public Rigidbody2D rb2d;
+    public Animator anim;
 
     Vector2 moveVector;
 
@@ -16,6 +17,11 @@ public class PlayerActions : MonoBehaviour
 
         moveVector.x = Input.GetAxisRaw("Horizontal");
         moveVector.y = Input.GetAxisRaw("Vertical");
+
+        if (moveVector != Vector2.zero)
+            anim.SetBool("IsMoving", true);
+        else
+            anim.SetBool("IsMoving", false);
 
     }
 
